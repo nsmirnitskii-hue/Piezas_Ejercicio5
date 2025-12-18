@@ -51,7 +51,7 @@ fun PuzzleApp() {
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) { //Crea una matriz 2x2 para guardar las posiciones del tablero cada celda tendrá su x, y, fila y columna.
-        val arrayBox=Array(2) { Array(4) { BoxInfo(
+        val arrayBox=Array(4) { Array(4) { BoxInfo(
         ) } }
         // Tablero arriba (solo marco vacío)
         Column {
@@ -91,8 +91,8 @@ fun PuzzleApp() {
         Spacer(modifier = Modifier.height(40.dp))
 
         // Piezas abajo
-        Row(Modifier.horizontalScroll(state)) {
-            listOf(0, 1, 2, 3, 4, 5).shuffled().forEach { piece -> //Crea las piezas mezcladas
+        Box() {
+            listOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11).shuffled().forEach { piece -> //Crea las piezas mezcladas
                 //DraggablePiece(piece)
                 //DraggablePieceConCabezas(piece)
                 //DraggablePieceMap(piece)
